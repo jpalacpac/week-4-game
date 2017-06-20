@@ -3,6 +3,14 @@ h1 {
   font-weight: bold;
 }
 
+.number {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  background: white;
+
+}
+
 .wrapper {
   border-radius: 15px;
   background: lightgrey;

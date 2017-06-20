@@ -5,12 +5,11 @@ var counter = 0;
 var targetNumber = Math.floor( Math.random() * (120 - 19 + 1) + 19);
 
 $("#number-to-guess").text(targetNumber);
-
+  
   var iconOne = [Math.floor( Math.random() * 12 + 1)];
   var iconTwo = [Math.floor(Math.random() * 12 + 1)];
   var iconThree = [Math.floor(Math.random() * 12 + 1)];
   var iconFour = [Math.floor(Math.random() * 12 + 1)];
-
 
   var imageOne = $("<img>");
   var imageTwo = $("<img>")
@@ -31,7 +30,7 @@ $("#number-to-guess").text(targetNumber);
   imageTwo.attr("data-crystalvalue", iconTwo[0]);
   imageThree.attr("data-crystalvalue", iconThree[0]);
   imageFour.attr("data-crystalvalue", iconFour[0]);
- 
+  
   $("#red").append(imageOne);
   $("#yellow").append(imageTwo);
   $("#green").append(imageThree);
@@ -86,8 +85,7 @@ $(document).ready(function() {
 
   });
 
-
-  $(".yellowOne",).on("click", function() {
+  $(".yellowOne").on("click", function() {
 
      $(".yellowOne").rotate({angle: 0, animateTo: 180});
 
