@@ -2,14 +2,14 @@ var win = 0;
 var loss = 0;
 var counter = 0;
 
-var targetNumber = Math.floor( Math.random() * (120 - 19 + 1) + 19);
+var targetNumber = Math.floor(Math.random() * (120 - 19 + 1) + 19);
 
 $("#number-to-guess").text(targetNumber);
   
-  var iconOne = [Math.floor( Math.random() * 12 + 1)];
-  var iconTwo = [Math.floor(Math.random() * 12 + 1)];
-  var iconThree = [Math.floor(Math.random() * 12 + 1)];
-  var iconFour = [Math.floor(Math.random() * 12 + 1)];
+  var iconOne = Math.floor(Math.random() * 12 + 1);
+  var iconTwo = Math.floor(Math.random() * 12 + 1);
+  var iconThree = Math.floor(Math.random() * 12 + 1);
+  var iconFour = Math.floor(Math.random() * 12 + 1);
 
   var imageOne = $("<img>");
   var imageTwo = $("<img>")
@@ -26,10 +26,10 @@ $("#number-to-guess").text(targetNumber);
   imageThree.attr("src", "assets/images/green.png");
   imageFour.attr("src", "assets/images/blue.png")
 
-  imageOne.attr("data-crystalvalue", iconOne[0]);
-  imageTwo.attr("data-crystalvalue", iconTwo[0]);
-  imageThree.attr("data-crystalvalue", iconThree[0]);
-  imageFour.attr("data-crystalvalue", iconFour[0]);
+  imageOne.attr("data-crystalvalue", iconOne);
+  imageTwo.attr("data-crystalvalue", iconTwo);
+  imageThree.attr("data-crystalvalue", iconThree);
+  imageFour.attr("data-crystalvalue", iconFour);
   
   $("#red").append(imageOne);
   $("#yellow").append(imageTwo);
@@ -38,13 +38,16 @@ $("#number-to-guess").text(targetNumber);
 
 var newgame = function(){
     counter = 0;
-    $("#your-total").text(counter);
-    $("#number-to-guess").text(targetNumber);
     targetNumber = Math.floor( Math.random() * (120 - 19 + 1) + 19);
-    var iconOne = [Math.floor( Math.random() * 12 + 1)];
-    var iconTwo = [Math.floor(Math.random() * 12 + 1)]
-    var iconThree = [Math.floor(Math.random() * 12 + 1)]
-    var iconFour = [Math.floor(Math.random() * 12 + 1)]
+    iconOne = Math.floor(Math.random() * 12 + 1);
+    iconTwo = Math.floor(Math.random() * 12 + 1);
+    iconThree = Math.floor(Math.random() * 12 + 1);
+    iconFour = Math.floor(Math.random() * 12 + 1);
+    imageOne.attr("data-crystalvalue", iconOne);
+    imageTwo.attr("data-crystalvalue", iconTwo);
+    imageThree.attr("data-crystalvalue", iconThree);
+    imageFour.attr("data-crystalvalue", iconFour);
+    console.log("Red: " + iconOne + " Yellow " + iconTwo + " Blue: " + iconThree +  " Green: " + iconFour)
 }
 
 var winlose = function() {
