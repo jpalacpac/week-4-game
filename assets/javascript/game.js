@@ -47,7 +47,7 @@ var newgame = function(){
     imageTwo.attr("data-crystalvalue", iconTwo);
     imageThree.attr("data-crystalvalue", iconThree);
     imageFour.attr("data-crystalvalue", iconFour);
-    console.log("Red: " + iconOne + " Yellow " + iconTwo + " Blue: " + iconThree +  " Green: " + iconFour)
+    console.log("Red: " + iconOne + " Yellow " + iconTwo + " Green: " + iconThree +  " Blue: " + iconFour)
 }
 
 var winlose = function() {
